@@ -4,15 +4,86 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="footer" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Animated Portfolio</title>
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <div class="main-container">
+      <header class="header">
+        <div class="logo">
+          <img src="./images/logo.png" alt="logo" />
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#"><i class="fa fa-home"></i>Home</a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-user"></i>About Me
+                <i class="fa fa-angle-down"></i
+              ></a>
+              <ul class="about-d">
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Education</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-clone"></i>Services<i
+                  class="fa fa-angle-down"
+                ></i
+              ></a>
+              <ul class="services-d">
+                <li><a href="#">Web Designing</a></li>
+                <li class="open-sub">
+                  <a href="#">Marketing</a><i class="fa fa-angle-right"></i>
+                  <ul>
+                    <li><a href="#">SEO</a></li>
+                    <li><a href="#">Social Media</a></li>
+                    <li><a href="#">E-mail Marketing</a></li>
+                  </ul>
+                </li>
+                <li class="open-sub">
+                  <a href="#">Mobile App</a><i class="fa fa-angle-right"></i>
+                  <ul>
+                    <li><a href="#">Android App</a></li>
+                    <li><a href="#">IOS App</a></li>
+                    <li><a href="#">Ionic App</a></li>
+                    <li><a href="#">Flutter App</a></li>
+                    <li><a href="#">Unity App</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-users"></i>Clients</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-inr"></i>Pricing</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-edit"></i>Training</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-phone"></i>Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main></main>
+
+      <footer></footer>
+    </div>
   </body>
 </html>
