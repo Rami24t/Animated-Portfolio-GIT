@@ -23,6 +23,7 @@ body {
   justify-content: space-around;
   gap: 2.8vw;
   margin-right: 2.8vw;
+  padding: 20px;
 }
 .header .logo {
   margin-left: 2rem;
@@ -36,9 +37,11 @@ body {
 .header .open-sub:hover > ul {
   display: flex;
   flex-direction: column;
-  height: fit-content;
-  width: fit-content;
-  min-width: 180px;
+  min-width: 170px;
+}
+.header .open-sub > ul {
+  display: none;
+  position: absolute;
   right: -100%;
   top: -50%;
 }
@@ -48,6 +51,9 @@ body {
 
 .header nav ul li {
   list-style-type: none;
+}
+.header nav > ul > li {
+  padding: 5px;
 }
 .header nav ul li a {
   text-decoration: none;
@@ -65,12 +71,6 @@ body {
   top: 100%;
 }
 
-.header .open-sub > ul {
-  display: none;
-  position: absolute;
-  left: 100%;
-  bottom: 0%;
-}
 .header ul > li:hover > ul {
   display: flex;
   justify-content: center;
@@ -101,6 +101,25 @@ body {
 .header nav > ul ul li:not(li:last-child) {
   border-bottom: 1px solid rgba(251, 173, 3, 0.3);
 }
+
+@media only screen and (max-width: 542px) {
+  .header .open-sub > ul {
+    right: 20%;
+    top: 95%;
+    z-index: 999;
+    padding-right: 0px;
+  }
+  .fa-angle-right {
+    transform: rotate(90deg);
+  }
+  .header nav > ul > li > ul {
+    z-index: 9;
+  }
+  .header nav > ul > li {
+    padding: 10px;
+  }
+}
+
 main {
   background: radial-gradient(#03a2ea, #004d6f);
   min-height: calc(80vh - 70px);
