@@ -44,6 +44,7 @@ body {
   position: absolute;
   right: -100%;
   top: -50%;
+  z-index: 999;
 }
 .header > nav ul ul li {
   padding: 9px 0px;
