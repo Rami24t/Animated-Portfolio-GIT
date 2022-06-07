@@ -1,3 +1,7 @@
+# Live version
+
+- https://rami24t.github.io/Animated-Portfolio-GIT/
+
 # Animated Portfolio
 
 In this exercise we'll be creating a single portfolio webpage with dropdown menu, `clip-path` and animations
