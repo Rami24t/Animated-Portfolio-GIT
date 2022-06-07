@@ -1,0 +1,156 @@
+/***** Main ******/
+main {
+  width: 100%;
+  height: 80vh;
+  background: radial-gradient(rgb(85, 120, 153) 25%, rgb(62, 113, 189) 75%);
+  margin-top: 2rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.main-box-m {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading-box-m {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.heading-m {
+  
+  font-size: 4rem;
+  color: white;
+  font-weight: 800;
+}
+.heading1-m::after {
+  content: "FREELANCE";
+  display: flex;
+  transform: rotateX(180deg);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.5)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: -30px;
+  width: 100%;
+}
+
+.heading2-m::after {
+  content: "WEB-DEVELOPER";
+  display: flex;
+  transform: rotateX(180deg);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.5)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: -30px;
+}
+
+.heading1-m {
+  animation: slide 8s ease-out infinite;
+  position:absolute;
+  top:60%;
+}
+.heading2-m {
+  animation: slide 12s linear 2s infinite;
+  position:absolute;
+  top:70%;
+}
+
+@keyframes slide {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    
+    50% {
+      transform: translate(350px, 0);
+    }
+    
+    80% {
+      transform: translate(-350px, 0);
+    }
+  } 
+
+
+
+.info-m {
+  width: 2.5rem;
+  height: 2.5rem;
+ /* background-color:hotpink;*/
+  color: white;
+  border-radius: 50%;
+  display:flex;
+  /*place-self: center;*/
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index:2;
+  margin:0 auto;
+  animation: bounce 2s linear infinite alternate;
+}
+.info-m:hover {
+  cursor: pointer;
+  animation: bounce 2s linear infinite alternate paused;
+}
+
+
+@keyframes bounce 
+{
+  from{
+    transform: translateY(50px);
+  }  
+  to{
+    transform: translateY(80px);
+  }  
+}
+.info-m::before {
+  content: "";
+  background-color:hotpink;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+
+.info-m::after {
+  content: "Hire me";
+text-align: center;
+  font-size:1.8rem;
+  padding:3rem;
+  width: 15rem;
+  height:10rem;
+  border-radius: 1rem;
+  background-color:#03a9f4;
+  background-image: url('./images/smily.png');
+  background-repeat: no-repeat;
+  background-position:50% 90%;
+  background-size:45%;
+  position: absolute;
+  top:-1rem;
+  left:-1rem;
+  z-index: -2;
+  box-shadow: 0px 0px 40px 1px white, 0px 0px 50px 10px white;
+  transform:scale(0);
+  transform-origin: top left;
+  transition:  all 500ms linear;
+  
+}
+
+.info-m:hover::after{
+transform: scale(1);
+transform-origin:top left;
+}
+ 
+
+
+
