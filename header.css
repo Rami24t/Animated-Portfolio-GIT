@@ -16,6 +16,8 @@ body {
   min-height: 70px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   margin-bottom: 2vmin;
+  position: relative;
+  z-index: 99;
 }
 .header > nav > ul {
   display: flex;
@@ -119,13 +121,4 @@ body {
   .header nav > ul > li {
     padding: 10px;
   }
-}
-
-main {
-  background: radial-gradient(#03a2ea, #004d6f);
-  min-height: calc(80vh - 70px);
-}
-footer {
-  background-color: rgba(0, 0, 0, 0.938);
-  min-height: calc(20vh - 20px);
 }

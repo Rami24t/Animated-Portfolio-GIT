@@ -2,24 +2,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #062643;
+  background-color: #031321;
+  /* min-height: calc(20vh - 20px); */
   padding: 30px;
 }
-a {
+footer a {
   color: #228ce1;
   position: relative;
   display: block;
-  padding: 15px 30px;
+  padding: 15px 15px;
 
   text-transform: uppercase;
   letter-spacing: 18px;
- 
+
   font-size: 30px;
   overflow: hidden;
   transition: 0.3s;
-  margin: 0 50px;
+  margin: 0 45px;
 }
-
 
 .btn-1-f span:nth-child(1) {
   position: absolute;
@@ -58,19 +58,14 @@ a {
   background: linear-gradient(360deg, transparent, #228ce1);
 }
 
-
-
-
 .btn-1-f:hover {
   color: #255784;
   background: #2196f3;
   box-shadow: 0 0 20px #2196f3, 0 0 80px #2196f3, 0 0 160px #2196f3,
     0 0 320px #2196f3;
   transition-delay: 1s;
+  cursor: pointer;
 }
-
-
-
 
 .btn-1-f:hover span:nth-child(1) {
   transform: translateX(100%);

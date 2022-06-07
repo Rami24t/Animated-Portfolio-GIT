@@ -2,9 +2,12 @@
 main {
   width: 100%;
   height: 80vh;
-  background: radial-gradient(rgb(85, 120, 153) 25%, rgb(62, 113, 189) 75%);
+  background: radial-gradient(#03a2ea, #004d6f);
+  min-height: calc(100vh - 70px);
   margin-top: 2rem;
   font-family: Helvetica, sans-serif;
+  position: relative;
+  z-index: 2;
 }
 
 .main-box-m {
@@ -19,7 +22,6 @@ main {
   align-items: center;
 }
 .heading-m {
-  
   font-size: 4rem;
   color: white;
   font-weight: 800;
@@ -55,102 +57,102 @@ main {
 
 .heading1-m {
   animation: slide 8s ease-out infinite;
-  position:absolute;
-  top:60%;
+  position: absolute;
+  top: 60%;
 }
 .heading2-m {
   animation: slide 12s linear 2s infinite;
-  position:absolute;
-  top:70%;
+  position: absolute;
+  top: 70%;
 }
 
 @keyframes slide {
-    0%, 100% {
-      transform: translate(0, 0);
-    }
-    
-    50% {
-      transform: translate(350px, 0);
-    }
-    
-    80% {
-      transform: translate(-350px, 0);
-    }
-  } 
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
 
+  50% {
+    transform: translate(350px, 0);
+  }
 
+  80% {
+    transform: translate(-350px, 0);
+  }
+}
 
-.info-m {
+/* info */
+@keyframes bounce {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(80px);
+  }
+}
+
+/* whole container */
+.info-container-m {
   width: 2.5rem;
   height: 2.5rem;
- /* background-color:hotpink;*/
-  color: white;
   border-radius: 50%;
-  display:flex;
-  /*place-self: center;*/
+  position: absolute;
+  top: 0;
+  right: 50%;
+  color: white;
+  display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  z-index:2;
-  margin:0 auto;
+  transition: all 500ms linear;
   animation: bounce 2s linear infinite alternate;
+  clip-path: circle(50%);
 }
-.info-m:hover {
-  cursor: pointer;
-  animation: bounce 2s linear infinite alternate paused;
-}
-
-
-@keyframes bounce 
-{
-  from{
-    transform: translateY(50px);
-  }  
-  to{
-    transform: translateY(80px);
-  }  
-}
-.info-m::before {
-  content: "";
-  background-color:hotpink;
+/* i */
+.info-container-m > p {
+  background-color: rgb(240, 98, 169);
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  position: absolute;
-  top:0;
-  left:0;
-  z-index: -1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms linear;
+  clip-path: circle(50%);
+  z-index: 2;
 }
-
-.info-m::after {
-  content: "Hire me";
-text-align: center;
-  font-size:1.8rem;
-  padding:3rem;
-  width: 15rem;
-  height:10rem;
-  border-radius: 1rem;
-  background-color:#03a9f4;
-  background-image: url('./images/smily.png');
+.info-container-m:hover > p {
+  background-color: hotpink;
+}
+/* whole container on  hover */
+.info-container-m:hover {
+  clip-path: circle(1100%);
+  cursor: pointer;
+  animation-play-state: paused;
+}
+/* img */
+.info-content-m {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 3rem;
+  width: 20rem;
+  height: 13rem;
+  border-radius: 4%;
+  background-color: #03a9f4;
+  background-image: url("./images/smily.png");
   background-repeat: no-repeat;
-  background-position:50% 90%;
-  background-size:45%;
+  background-position: 50% 70%;
+  background-size: 30%;
   position: absolute;
-  top:-1rem;
-  left:-1rem;
-  z-index: -2;
+  top: 0rem;
+  left: 0rem;
   box-shadow: 0px 0px 40px 1px white, 0px 0px 50px 10px white;
-  transform:scale(0);
   transform-origin: top left;
-  transition:  all 500ms linear;
-  
+  transition: all 500ms linear;
 }
-
-.info-m:hover::after{
-transform: scale(1);
-transform-origin:top left;
+/* hire me */
+.info-content-m > p {
+  text-align: center;
+  font-size: 1.3rem;
+  transform: translateY(-90%);
 }
- 
-
-
-
