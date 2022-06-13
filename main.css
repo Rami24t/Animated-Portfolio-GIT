@@ -42,7 +42,7 @@ main {
 }
 
 .heading2-m::after {
-  content: "WEB-DEVELOPER";
+  content: "WEB DEVELOPER";
   display: flex;
   transform: rotateX(180deg);
   background-image: linear-gradient(
@@ -63,7 +63,7 @@ main {
 .heading2-m {
   animation: slide 12s linear 2s infinite;
   position: absolute;
-  top: 70%;
+  top: 80%;
 }
 
 @keyframes slide {
@@ -105,7 +105,7 @@ main {
   align-items: center;
   transition: all 500ms linear;
   animation: bounce 2s linear infinite alternate;
-  clip-path: circle(50%);
+  clip-path: circle(40%);
 }
 /* i */
 .info-container-m > p {
@@ -146,7 +146,7 @@ main {
   position: absolute;
   top: 0rem;
   left: 0rem;
-  box-shadow: 0px 0px 40px 1px white, 0px 0px 50px 10px white;
+  box-shadow: 2px 4px 10px 5px rgb(231, 227, 227), 0px 0px 5px 0px rgb(253, 246, 246);
   transform-origin: top left;
   transition: all 500ms linear;
 }
